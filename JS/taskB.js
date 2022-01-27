@@ -1,10 +1,12 @@
 function findNumbers(str)  {
+    if (!str) return null;
+
     var strArr = str.split(' ');
     var result = [];
 
-    for(let i = 0; i < strArr.length; i++) 
-        if (!isNaN(strArr[i])) 
-        result.push(parseFloat(strArr[i]));
+    for(let item of strArr) 
+        if (!isNaN(item)) 
+        result.push(parseFloat(item));
     
     return result;
 }

@@ -1,4 +1,4 @@
-class ConcurrecyQueue {
+class ConcurencyQueue {
   constructor(concurrency = 1) {
     this.concurrency = concurrency;
     this.requests = [];
@@ -42,7 +42,7 @@ function createReq(count) {
 }
 
 var arrProm = createReq(10);
-const concQueue = new ConcurrecyQueue(3);
+const concQueue = new ConcurencyQueue(3);
 
 arrProm.forEach(req => concQueue.enqueue(req))
 concQueue.queuing();

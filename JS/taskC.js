@@ -1,4 +1,6 @@
 function f(str)  {
+    if (!str) return null;
+    
     var count = 1;
     var resStr = "";
 
